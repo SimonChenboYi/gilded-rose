@@ -1,12 +1,15 @@
+#!/usr/bin/ruby -w
+
+# frozen_string_literal: true
+
 require File.join(File.dirname(__FILE__), 'gilded_rose')
+require File.join(File.dirname(__FILE__), 'item')
 require 'test/unit'
 
 class TestUntitled < Test::Unit::TestCase
-
   def test_foo
-    items = [Item.new("foo", 0, 0)]
-    GildedRose.new(items).update_quality()
-    assert_equal items[0].name, "fixme"
+    items = [Item.new('foo', 0, 0)]
+    GildedRose.new(items).update_quality
+    assert_equal items[0].name, 'foo'
   end
-
 end
